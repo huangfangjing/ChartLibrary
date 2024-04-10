@@ -1,6 +1,11 @@
-折线图
-       var lineView: AiLineChartView = findViewById(R.id.lineView)
+dependencies {
+	        implementation 'com.github.huangfangjing:ChartLibrary:v1.0.0'
+	}
 
+
+折线图
+
+       var lineView: AiLineChartView = findViewById(R.id.lineView)
         var lineData: List<TwoLevelData> =
             Gson().fromJson(StaticData.DATA, object : TypeToken<ArrayList<TwoLevelData>>() {}.type)
         lineView.buildDate(lineData, LineChartView.OnLineChartListener {
@@ -12,6 +17,7 @@
 
 
 条形图
+
        var barView: AiVerticalBarView = findViewById(R.id.barView)
         var barData: List<TwoLevelData> = Gson().fromJson(
             StaticData.DATA_BAR,
