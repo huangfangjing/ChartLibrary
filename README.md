@@ -1,3 +1,5 @@
+依赖
+
 dependencies {
 	        implementation 'com.github.huangfangjing:ChartLibrary:v1.0.0'
 	}
