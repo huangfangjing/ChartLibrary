@@ -3,7 +3,6 @@ package com.example.mychart
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.chartlibraby.R
 import com.example.chartlibraby.bean.StaticData
 import com.example.chartlibraby.bean.TwoLevelData
 import com.example.chartlibraby.widget.AiLineChartView
@@ -14,14 +13,12 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var lineView: AiLineChartView
-    private lateinit var barView: AiVerticalBarView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        lineView = findViewById(R.id.lineView)
+        var lineView: AiLineChartView = findViewById(R.id.lineView)
 
         var lineData: List<TwoLevelData> =
             Gson().fromJson(StaticData.DATA, object : TypeToken<ArrayList<TwoLevelData>>() {}.type)
@@ -32,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         lineView.setUseAnimation(true)//默认使用动画
 
 
-        barView = findViewById(R.id.barView)
+        var barView: AiVerticalBarView = findViewById(R.id.barView)
         var barData: List<TwoLevelData> = Gson().fromJson(
             StaticData.DATA_BAR,
             object : TypeToken<ArrayList<TwoLevelData>>() {}.type
