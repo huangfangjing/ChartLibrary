@@ -12,7 +12,7 @@
 
 
 条形图
-         var barView: AiVerticalBarView = findViewById(R.id.barView)
+       var barView: AiVerticalBarView = findViewById(R.id.barView)
         var barData: List<TwoLevelData> = Gson().fromJson(
             StaticData.DATA_BAR,
             object : TypeToken<ArrayList<TwoLevelData>>() {}.type
