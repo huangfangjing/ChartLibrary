@@ -1,8 +1,6 @@
 依赖
 
-dependencies {
-	        implementation 'com.github.huangfangjing:ChartLibrary:v1.0.0'
-	}
+implementation 'com.github.huangfangjing:ChartLibrary:v1.0.0'
 
 
 折线图
